@@ -23,3 +23,6 @@ If user chooses false on all confirms, error message appears and they are asked 
 
 Uncertain error persists - at random times, there is an 'undefined' component in a generated password. Unsure what term(s) are at fault.
 Error shows up in all individual arrays. Shown most clearly when generating a long password.
+
+Work day 2 addendum:
+Found uncertain error. Math.random was occasionally attempting to return item -1 from arrays. Solved.
