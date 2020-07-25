@@ -20,3 +20,6 @@ Followed by 4 confirms, one for each of the individual arrays.
 Based on whether the user press true or false, they receive a password including the characters they wanted and of the length they chose.
 
 If user chooses false on all confirms, error message appears and they are asked to start over.
+
+Uncertain error persists - at random times, there is an 'undefined' component in a generated password. Unsure what term(s) are at fault.
+Error shows up in all individual arrays. Shown most clearly when generating a long password.
