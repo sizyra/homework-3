@@ -16,60 +16,11 @@
 <body>
     <h1 class='mt-5 text-center'>Password Generator</h1>
 
-    <div class='container bg-light border border-secondary mt-5'>
-        <div class='row'>
-            <div class='col mt-2 ml-2 mr-3'>
-                <div class='row'>
-                    <h4>Default Password</h4>
-                </div>
-
-                <div class='row'>
-                    <p>Your password will default to a 12-digit alphanumeric string. You may also create a customized password using the following criteria:</p>
-                </div>
-            </div>
-
-            <div class='col mt-2 ml-3 mr-2'>
-                <div class='row'>
-                    <h4>Select from the following:</h4>
-                </div>
-
-                <div class='row'>
-                    <p class='mt-2 mb-1'><strong>Alternate Length</strong></p>
-                </div>
-
-                <div class='row'>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="24" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">24 Characters</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="32" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">32 Characters</label>
-                    </div>
-                </div>
-
-                <div class='row'>
-                    <p class='mt-2 mb-1'><strong>Extra</strong></p>
-                </div>
-
-                <div class='row'>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="case" value="option1">
-                        <label class="form-check-label" for="inlineCheckbox1">Upper- and Lower-case</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="checkbox" id="spec" value="option2">
-                        <label class="form-check-label" for="inlineCheckbox2">Special Characters</label>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class='container bg-light border border-secondary mt-1'>
-        <button onclick='choices()' type="button" class="btn btn-large btn-success mt-1">Generate Password</button>
+        <button onclick='buttonpress()' id='button' type="button" class="btn btn-large btn-success mt-1">Generate Password</button>
         <div class='row m-auto'>
-            <p id='password'>Your Password</p>
+            <p>You will be asked for password length (between 8 and 128 only). Then you must decide if you want your password to include lowercase letters, uppercase letters, numbers, and/or special characters. You must select at least one character type.</p>
         </div>
     </div>
 
