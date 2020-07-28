@@ -83,6 +83,7 @@ function buttonpress() {
         }
 
         alert(allYesAlert);
+        console.log(allYesAlert);
     } else if(askLet && askCase && askNum && !askSpec) {
         // If the user chooses everything but special characters:
         var alertOneTwoThree = '';
@@ -92,6 +93,7 @@ function buttonpress() {
         }
 
         alert(alertOneTwoThree);
+        console.log(alertOneTwoThree);
     } else if(askLet && askCase && !askNum && askSpec) {
         // If the user chooses everything but numbers:
         var alertOneTwoFour = '';
@@ -101,6 +103,7 @@ function buttonpress() {
         }
 
         alert(alertOneTwoFour);
+        console.log(alertOneTwoFour);
     } else if(askLet && !askCase && askNum && askSpec) {
         // If the user chooses everything but uppercase letters:
         var alertOneThreeFour = '';
@@ -110,6 +113,7 @@ function buttonpress() {
         }
 
         alert(alertOneThreeFour);
+        console.log(alertOneThreeFour);
     } else if(!askLet && askCase && askNum && askSpec) {
         // If the user chooses everything but lowercase letters:
         var alertTwoThreeFour = '';
@@ -119,6 +123,7 @@ function buttonpress() {
         }
 
         alert(alertTwoThreeFour);
+        console.log(alertTwoThreeFour);
     } else if(askLet && askCase && !askNum && !askSpec) {
         // If the user chooses only lowercase and uppercase letters:
         var alertOneTwo = '';
@@ -128,6 +133,7 @@ function buttonpress() {
         }
 
         alert(alertOneTwo);
+        console.log(alertOneTwo);
     } else if(askLet && !askCase && askNum && !askSpec) {
         // If the user chooses only lowercase letters and numbers:
         var alertOneThree = '';
@@ -137,6 +143,7 @@ function buttonpress() {
         }
 
         alert(alertOneThree);
+        console.log(alertOneThree);
     } else if(askLet && !askCase && !askNum && askSpec) {
         // If the user chooses only lowercase letters and special characters:
         var alertOneFour = '';
@@ -146,6 +153,7 @@ function buttonpress() {
         }
 
         alert(alertOneFour);
+        console.log(alertOneFour);
     } else if(!askLet && askCase && askNum && !askSpec) {
         // If the user chooses only uppercase letters and numbers:
         var alertTwoThree = '';
@@ -155,6 +163,7 @@ function buttonpress() {
         }
 
         alert(alertTwoThree);
+        console.log(alertTwoThree);
     } else if(!askLet && askCase && !askNum && askSpec) {
         // If the user chooses only uppercase letters and special characters:
         var alertTwoFour = '';
@@ -164,6 +173,7 @@ function buttonpress() {
         }
 
         alert(alertTwoFour);
+        console.log(alertTwoFour);
     } else if(!askLet && !askCase && askNum && askSpec) {
         // If the user chooses only numbers and special characters:
         var alertThreeFour = '';
@@ -173,6 +183,7 @@ function buttonpress() {
         }
 
         alert(alertThreeFour);
+        console.log(alertThreeFour);
     } else if(askLet && !askCase && !askNum && !askSpec) {
         // If the user chooses only lowercase letters:
         var alertOne = '';
@@ -182,6 +193,7 @@ function buttonpress() {
         }
 
         alert(alertOne);
+        console.log(alertOne);
     } else if(!askLet&& askCase && !askNum && !askSpec) {
         // If the user chooses only uppercase letters:
         var alertTwo = '';
@@ -191,6 +203,7 @@ function buttonpress() {
         }
 
         alert(alertTwo);
+        console.log(alertTwo);
     } else if(!askLet && !askCase && askNum && !askSpec) {
         // If the user chooses only numbers:
         var alertThree = '';
@@ -200,6 +213,7 @@ function buttonpress() {
         }
 
         alert(alertThree);
+        console.log(alertThree)
     } else if(!askLet && !askCase && !askNum && askSpec) {
         // If the user chooses only special characters:
         var alertFour = '';
@@ -209,6 +223,7 @@ function buttonpress() {
         }
 
         alert(alertFour);
+        console.log(alertFour);
     } else if(!askLet && !askCase && !askNum && !askSpec) {
         alert('You must choose at least one character type. Press the button again to start over.');
     }
