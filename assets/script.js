@@ -54,7 +54,7 @@ function buttonpress() {
     // Turns the user's entry from a string to a number:
     var lengthNum = parseInt(askLength);
     
-    if (askLength === null) {
+    if (!askLength) {
         alert('You must choose a length. Press the button again to start over.');
     }
 
@@ -72,159 +72,159 @@ function buttonpress() {
         var askNum = confirm('Do you want numbers in your password? OK for yes, Cancel for no.');
 
         var askSpec = confirm('Do you want special characters in your password? OK for yes, Cancel for no.');
-    }
-
-    if(askLet && askCase && askNum && askSpec) {
-        // If the user chooses to use all available characters:
-        var allYesAlert = '';
-
-        for (var i = 0; i < lengthNum; i++) {
-            allYesAlert += allYes[Math.floor(Math.random() * (allYes.length -1))];
+    
+        if(askLet && askCase && askNum && askSpec) {
+            // If the user chooses to use all available characters:
+            var allYesAlert = '';
+    
+            for (var i = 0; i < lengthNum; i++) {
+                allYesAlert += allYes[Math.floor(Math.random() * (allYes.length -1))];
+            }
+    
+            alert(allYesAlert);
+            console.log(allYesAlert);
+        } else if(askLet && askCase && askNum && !askSpec) {
+            // If the user chooses everything but special characters:
+            var alertOneTwoThree = '';
+    
+            for (var i = 0; i < lengthNum; i++) {
+                alertOneTwoThree += oneTwoThree[Math.floor(Math.random() * (oneTwoThree.length -1))];
+            }
+    
+            alert(alertOneTwoThree);
+            console.log(alertOneTwoThree);
+        } else if(askLet && askCase && !askNum && askSpec) {
+            // If the user chooses everything but numbers:
+            var alertOneTwoFour = '';
+    
+            for (var i = 0; i < lengthNum; i++) {
+                alertOneTwoFour += oneTwoFour[Math.floor(Math.random() * (oneTwoFour.length -1))];
+            }
+    
+            alert(alertOneTwoFour);
+            console.log(alertOneTwoFour);
+        } else if(askLet && !askCase && askNum && askSpec) {
+            // If the user chooses everything but uppercase letters:
+            var alertOneThreeFour = '';
+    
+            for (var i = 0; i < lengthNum; i++) {
+                alertOneThreeFour += oneThreeFour[Math.floor(Math.random() * (oneThreeFour.length -1))];
+            }
+    
+            alert(alertOneThreeFour);
+            console.log(alertOneThreeFour);
+        } else if(!askLet && askCase && askNum && askSpec) {
+            // If the user chooses everything but lowercase letters:
+            var alertTwoThreeFour = '';
+    
+            for (var i = 0; i < lengthNum; i++) {
+                alertTwoThreeFour += twoThreeFour[Math.floor(Math.random() * (twoThreeFour.length -1))];
+            }
+    
+            alert(alertTwoThreeFour);
+            console.log(alertTwoThreeFour);
+        } else if(askLet && askCase && !askNum && !askSpec) {
+            // If the user chooses only lowercase and uppercase letters:
+            var alertOneTwo = '';
+    
+            for (var i = 0; i < lengthNum; i++) {
+                alertOneTwo += oneTwo[Math.floor(Math.random() * (oneTwo.length -1))];
+            }
+    
+            alert(alertOneTwo);
+            console.log(alertOneTwo);
+        } else if(askLet && !askCase && askNum && !askSpec) {
+            // If the user chooses only lowercase letters and numbers:
+            var alertOneThree = '';
+    
+            for (var i = 0; i < lengthNum; i++) {
+                alertOneThree += oneThree[Math.floor(Math.random() * (oneThree.length -1))];
+            }
+    
+            alert(alertOneThree);
+            console.log(alertOneThree);
+        } else if(askLet && !askCase && !askNum && askSpec) {
+            // If the user chooses only lowercase letters and special characters:
+            var alertOneFour = '';
+    
+            for (var i = 0; i < lengthNum; i++) {
+                alertOneFour += oneFour[Math.floor(Math.random() * (oneFour.length -1))];
+            }
+    
+            alert(alertOneFour);
+            console.log(alertOneFour);
+        } else if(!askLet && askCase && askNum && !askSpec) {
+            // If the user chooses only uppercase letters and numbers:
+            var alertTwoThree = '';
+    
+            for (var i = 0; i < lengthNum; i++) {
+                alertTwoThree += twoThree[Math.floor(Math.random() * (twoThree.length -1))];
+            }
+    
+            alert(alertTwoThree);
+            console.log(alertTwoThree);
+        } else if(!askLet && askCase && !askNum && askSpec) {
+            // If the user chooses only uppercase letters and special characters:
+            var alertTwoFour = '';
+    
+            for (var i = 0; i < lengthNum; i++) {
+                alertTwoFour += twoFour[Math.floor(Math.random() * (twoFour.length -1))];
+            }
+    
+            alert(alertTwoFour);
+            console.log(alertTwoFour);
+        } else if(!askLet && !askCase && askNum && askSpec) {
+            // If the user chooses only numbers and special characters:
+            var alertThreeFour = '';
+    
+            for (var i = 0; i < lengthNum; i++) {
+                alertThreeFour += threeFour[Math.floor(Math.random() * (threeFour.length -1))];
+            }
+    
+            alert(alertThreeFour);
+            console.log(alertThreeFour);
+        } else if(askLet && !askCase && !askNum && !askSpec) {
+            // If the user chooses only lowercase letters:
+            var alertOne = '';
+    
+            for (var i = 0; i < lengthNum; i++) {
+                alertOne += one[Math.floor(Math.random() * (one.length -1))];
+            }
+    
+            alert(alertOne);
+            console.log(alertOne);
+        } else if(!askLet&& askCase && !askNum && !askSpec) {
+            // If the user chooses only uppercase letters:
+            var alertTwo = '';
+    
+            for (var i = 0; i < lengthNum; i++) {
+                alertTwo += two[Math.floor(Math.random() * (two.length -1))];
+            }
+    
+            alert(alertTwo);
+            console.log(alertTwo);
+        } else if(!askLet && !askCase && askNum && !askSpec) {
+            // If the user chooses only numbers:
+            var alertThree = '';
+    
+            for (var i = 0; i < lengthNum; i++) {
+                alertThree += three[Math.floor(Math.random() * (three.length -1))];
+            }
+    
+            alert(alertThree);
+            console.log(alertThree)
+        } else if(!askLet && !askCase && !askNum && askSpec) {
+            // If the user chooses only special characters:
+            var alertFour = '';
+    
+            for (var i = 0; i < lengthNum; i++) {
+                alertFour += four[Math.floor(Math.random() * (four.length -1))];
+            }
+    
+            alert(alertFour);
+            console.log(alertFour);
+        } else if(!askLet && !askCase && !askNum && !askSpec) {
+            alert('You must choose at least one character type. Press the button again to start over.');
         }
-
-        alert(allYesAlert);
-        console.log(allYesAlert);
-    } else if(askLet && askCase && askNum && !askSpec) {
-        // If the user chooses everything but special characters:
-        var alertOneTwoThree = '';
-
-        for (var i = 0; i < lengthNum; i++) {
-            alertOneTwoThree += oneTwoThree[Math.floor(Math.random() * (oneTwoThree.length -1))];
-        }
-
-        alert(alertOneTwoThree);
-        console.log(alertOneTwoThree);
-    } else if(askLet && askCase && !askNum && askSpec) {
-        // If the user chooses everything but numbers:
-        var alertOneTwoFour = '';
-
-        for (var i = 0; i < lengthNum; i++) {
-            alertOneTwoFour += oneTwoFour[Math.floor(Math.random() * (oneTwoFour.length -1))];
-        }
-
-        alert(alertOneTwoFour);
-        console.log(alertOneTwoFour);
-    } else if(askLet && !askCase && askNum && askSpec) {
-        // If the user chooses everything but uppercase letters:
-        var alertOneThreeFour = '';
-
-        for (var i = 0; i < lengthNum; i++) {
-            alertOneThreeFour += oneThreeFour[Math.floor(Math.random() * (oneThreeFour.length -1))];
-        }
-
-        alert(alertOneThreeFour);
-        console.log(alertOneThreeFour);
-    } else if(!askLet && askCase && askNum && askSpec) {
-        // If the user chooses everything but lowercase letters:
-        var alertTwoThreeFour = '';
-
-        for (var i = 0; i < lengthNum; i++) {
-            alertTwoThreeFour += twoThreeFour[Math.floor(Math.random() * (twoThreeFour.length -1))];
-        }
-
-        alert(alertTwoThreeFour);
-        console.log(alertTwoThreeFour);
-    } else if(askLet && askCase && !askNum && !askSpec) {
-        // If the user chooses only lowercase and uppercase letters:
-        var alertOneTwo = '';
-
-        for (var i = 0; i < lengthNum; i++) {
-            alertOneTwo += oneTwo[Math.floor(Math.random() * (oneTwo.length -1))];
-        }
-
-        alert(alertOneTwo);
-        console.log(alertOneTwo);
-    } else if(askLet && !askCase && askNum && !askSpec) {
-        // If the user chooses only lowercase letters and numbers:
-        var alertOneThree = '';
-
-        for (var i = 0; i < lengthNum; i++) {
-            alertOneThree += oneThree[Math.floor(Math.random() * (oneThree.length -1))];
-        }
-
-        alert(alertOneThree);
-        console.log(alertOneThree);
-    } else if(askLet && !askCase && !askNum && askSpec) {
-        // If the user chooses only lowercase letters and special characters:
-        var alertOneFour = '';
-
-        for (var i = 0; i < lengthNum; i++) {
-            alertOneFour += oneFour[Math.floor(Math.random() * (oneFour.length -1))];
-        }
-
-        alert(alertOneFour);
-        console.log(alertOneFour);
-    } else if(!askLet && askCase && askNum && !askSpec) {
-        // If the user chooses only uppercase letters and numbers:
-        var alertTwoThree = '';
-
-        for (var i = 0; i < lengthNum; i++) {
-            alertTwoThree += twoThree[Math.floor(Math.random() * (twoThree.length -1))];
-        }
-
-        alert(alertTwoThree);
-        console.log(alertTwoThree);
-    } else if(!askLet && askCase && !askNum && askSpec) {
-        // If the user chooses only uppercase letters and special characters:
-        var alertTwoFour = '';
-
-        for (var i = 0; i < lengthNum; i++) {
-            alertTwoFour += twoFour[Math.floor(Math.random() * (twoFour.length -1))];
-        }
-
-        alert(alertTwoFour);
-        console.log(alertTwoFour);
-    } else if(!askLet && !askCase && askNum && askSpec) {
-        // If the user chooses only numbers and special characters:
-        var alertThreeFour = '';
-
-        for (var i = 0; i < lengthNum; i++) {
-            alertThreeFour += threeFour[Math.floor(Math.random() * (threeFour.length -1))];
-        }
-
-        alert(alertThreeFour);
-        console.log(alertThreeFour);
-    } else if(askLet && !askCase && !askNum && !askSpec) {
-        // If the user chooses only lowercase letters:
-        var alertOne = '';
-
-        for (var i = 0; i < lengthNum; i++) {
-            alertOne += one[Math.floor(Math.random() * (one.length -1))];
-        }
-
-        alert(alertOne);
-        console.log(alertOne);
-    } else if(!askLet&& askCase && !askNum && !askSpec) {
-        // If the user chooses only uppercase letters:
-        var alertTwo = '';
-
-        for (var i = 0; i < lengthNum; i++) {
-            alertTwo += two[Math.floor(Math.random() * (two.length -1))];
-        }
-
-        alert(alertTwo);
-        console.log(alertTwo);
-    } else if(!askLet && !askCase && askNum && !askSpec) {
-        // If the user chooses only numbers:
-        var alertThree = '';
-
-        for (var i = 0; i < lengthNum; i++) {
-            alertThree += three[Math.floor(Math.random() * (three.length -1))];
-        }
-
-        alert(alertThree);
-        console.log(alertThree)
-    } else if(!askLet && !askCase && !askNum && askSpec) {
-        // If the user chooses only special characters:
-        var alertFour = '';
-
-        for (var i = 0; i < lengthNum; i++) {
-            alertFour += four[Math.floor(Math.random() * (four.length -1))];
-        }
-
-        alert(alertFour);
-        console.log(alertFour);
-    } else if(!askLet && !askCase && !askNum && !askSpec) {
-        alert('You must choose at least one character type. Press the button again to start over.');
     }
 }

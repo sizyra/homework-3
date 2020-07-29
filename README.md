@@ -24,5 +24,10 @@ If user chooses false on all confirms, error message appears and they are asked 
 Uncertain error persists - at random times, there is an 'undefined' component in a generated password. Unsure what term(s) are at fault.
 Error shows up in all individual arrays. Shown most clearly when generating a long password.
 
+Uncertain error - if initial prompt receives null answer, secondary error message concerning types of characters included still plays.
+
 Work day 2 addendum:
 Found uncertain error. Math.random was occasionally attempting to return item -1 from arrays. Solved.
+
+Work day 3:
+Solved redundant error message. Placed secondary if/else chain inside initial if/else chain to ensure singular train of logic.
